@@ -16,7 +16,7 @@ parser.add_argument('--lr', '--learning_rate', default=0.01, type=float, help='i
 parser.add_argument('--model', default='resnet50', type=str)
 parser.add_argument('--op', default='SGD', type=str, help='optimizer')
 parser.add_argument('--es', default=5, help='the epoch starts update target')
-parser.add_argument('--alpha', default=0.2, help='alpha in backward')
+parser.add_argument('--alpha', default=0.8, help='alpha in SELC')
 parser.add_argument('--lr_s', default='MultiStepLR', type=str, help='learning rate scheduler')
 parser.add_argument('--loss', default='SELCLoss', type=str, help='loss function')
 parser.add_argument('--num_epochs', default=40, type=int)
@@ -203,7 +203,7 @@ if args.lr_s == 'MultiStepLR':
 if args.loss == 'CE':
     criterion = torch.nn.CrossEntropyLoss()
 elif args.loss == 'SELCLoss':
-    criterion = SELCLoss(noisy_labels, args.num_class, args.es, 1 - args.alpha)
+    criterion = SELCLoss(noisy_labels, args.num_class, args.es, args.alpha)
 
 exp_path = os.path.join('./',
                         'data={0}_model={1}_loss={2}_opt={3}_lr_s={4}_epoch={5}_bs={6}_batches={7}_es={8}_alpha={9}'.format(
