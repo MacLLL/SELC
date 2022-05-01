@@ -1,9 +1,10 @@
 import torch
+import sys
+sys.path.append('../..')
 import random
 from SELC.models.resnet import *
 import torch.optim as optim
 import os
-import sys
 import numpy as np
 from dataloader_cifar import cifar_dataloader
 import argparse

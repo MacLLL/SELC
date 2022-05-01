@@ -1,9 +1,10 @@
 import torch
+import sys
+sys.path.append('../..')
 import random
 from SELC.models.resnet import *
 import torch.optim as optim
 import os
-import sys
 import numpy as np
 from dataloader_cifar import cifar_dataloader
 import argparse
@@ -20,7 +21,7 @@ parser.add_argument('--lr_s', default='MultiStepLR', type=str, help='learning ra
 parser.add_argument('--loss', default='SELCLoss', type=str, help='loss function')
 parser.add_argument('--num_epochs', default=200, type=int)
 parser.add_argument('--log_interval', default=100, type=int)
-parser.add_argument('--r', default=0.4, type=float, help='noise ratio')
+parser.add_argument('--r', default=0.6, type=float, help='noise ratio')
 parser.add_argument('--id', default='')
 parser.add_argument('--seed', default=123)
 parser.add_argument('--gpuid', default=0, type=int)
