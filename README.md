@@ -1,2 +1,30 @@
-# SELC
-self ensemble label correction
+# SELC: Self-Ensemble Label Correction Improves Learning with Noisy Labels
+Code for IJCAI2022 "SELC: Self-Ensemble Label Correction Improves Learning with Noisy Labels"
+
+## Requirements
+- Python 3.8.3
+- Pytorch 1.8.1 
+
+
+## Usage
+To train the model in the paper, run the following commands:
+
+It can config with dataset, model, epoch, batchsize, noise_rate, symmetric or asymmetric type noise
+
+### Hyperparameter options:
+```
+--data_path             path to the data directory
+--noise_mode            label noise model(e.g. sym, asym)
+--r                     noise level (0.0, 0.2, 0.4, 0.6, 0.8)
+--loss                  loss functions (e.g. SELCLoss)
+--alpha                 alpha in SELC
+--batch_size            batch size
+--lr                    learning rate
+--lr_s                  learning rate schedule
+--op                    optimizer (e.g. SGD)          
+--num_epochs            number of epochs
+```
+
+
+## Citing this work
+If you use this code in your work, please cite the accompanying paper:
