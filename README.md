@@ -7,10 +7,12 @@ Code for IJCAI2022 "SELC: Self-Ensemble Label Correction Improves Learning with 
 
 
 ## Usage
-To train the model in the paper, run the following commands:
+To train the model using SELC in the paper, run the following commands:
+```train
+python3 train_cifar_with_SELC.py
+```
 
-It can config with dataset, model, epoch, batchsize, noise_rate, symmetric or asymmetric type noise
-
+It can config with noise_mode, noise_rate, batch size and epochs.
 ### Hyperparameter options:
 ```
 --data_path             path to the data directory
