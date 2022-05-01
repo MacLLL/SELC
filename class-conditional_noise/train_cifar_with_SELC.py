@@ -175,7 +175,6 @@ loss_train_per_epoch_model = np.array([])
 acc_val_per_epoch_model = np.array([])
 loss_val_per_epoch_model = np.array([])
 
-nn_acc_per_epoch_list = np.array([])
 for epoch in range(1, args.num_epochs + 1):
 
     loss_train_per_epoch, acc_train_per_epoch = train(
