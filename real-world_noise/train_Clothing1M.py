@@ -1,4 +1,6 @@
 import torch
+import sys
+sys.path.append('../..')
 import random
 import torch.nn as nn
 import torch.optim as optim
@@ -25,7 +27,7 @@ parser.add_argument('--id', default='')
 parser.add_argument('--seed', default=234)
 parser.add_argument('--gpuid', default=0, type=int)
 parser.add_argument('--num_class', default=14, type=int)
-parser.add_argument('--data_path', default='/u40/luy100/projects/datasets/clothing1m', type=str, help='path to dataset')
+parser.add_argument('--data_path', default='', type=str, help='path to dataset')
 parser.add_argument('--num_batches', default=2000, type=int)
 parser.add_argument('--dataset', default='clothing1M', type=str)
 args = parser.parse_args()

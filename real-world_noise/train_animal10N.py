@@ -1,5 +1,4 @@
 import sys
-
 sys.path.append('..')
 import os
 import torch.nn as nn
@@ -121,6 +120,7 @@ def main(arg_seed, arg_timestamp):
     # criterion = torch.nn.CrossEntropyLoss()
     noisy_labels = trainset.return_corrupted_label()
     criterion = SELCLoss(noisy_labels, num_class, args.es, args.alpha)
+
     # -- misc
     iterations = 0
     f_record = torch.zeros([args.rollWindow, len(trainset), num_class])

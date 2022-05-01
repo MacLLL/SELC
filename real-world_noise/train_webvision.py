@@ -1,4 +1,6 @@
 import torch
+import sys
+sys.path.append('../..')
 import random
 import torch.optim as optim
 import numpy as np
@@ -6,7 +8,6 @@ import dataloader_webvision as dataloader
 import argparse
 from SELC.models.InceptionResNetV2 import *
 import torch.nn.functional as F
-import sys
 
 parser = argparse.ArgumentParser(description='PyTorch webvision Training')
 parser.add_argument('--batch_size', default=32, type=int, help='train batchsize')
@@ -23,7 +24,7 @@ parser.add_argument('--id', default='')
 parser.add_argument('--seed', default=345)
 parser.add_argument('--gpuid', default=0, type=int)
 parser.add_argument('--num_class', default=50, type=int)
-parser.add_argument('--data_path', default='/u40/luy100/projects/datasets/webvision1.0/', type=str,
+parser.add_argument('--data_path', default='', type=str,
                     help='path to dataset')  # for webvision
 parser.add_argument('--dataset', default='webvision', type=str)
 args = parser.parse_args()
