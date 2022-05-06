@@ -29,3 +29,11 @@ It can config with noise_mode, noise_rate, batch size and epochs. Similar comman
 
 ## Citing this work
 If you use this code in your work, please cite the accompanying paper:
+```
+@article{lu2022selc,
+  title={SELC: Self-Ensemble Label Correction Improves Learning with Noisy Labels},
+  author={Lu, Yangdi and He, Wenbo},
+  journal={arXiv preprint arXiv:2205.01156},
+  year={2022}
+}
+```
