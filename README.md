@@ -7,7 +7,7 @@ Code for IJCAI2022 [SELC: Self-Ensemble Label Correction Improves Learning with 
 
 
 ## Usage
-For example, to train the model using SELC under class-conditional noise in the paper, run the following commands:
+For example, to train the model using SELC under class-conditional noise in the paper, run the following commands (Note that you need to download the CIFAR-10 and CIFAR-100 datasets first):
 ```train
 python3 train_cifar_with_SELC.py
 ```
@@ -25,7 +25,7 @@ It can config with noise_mode, noise_rate, batch size and epochs. Similar comman
 --op                    optimizer (e.g. SGD)          
 --num_epochs            number of epochs
 ```
-
+For [ANIMAL-10N](https://dm.kaist.ac.kr/datasets/animal-10n/), [Clothing1M](https://github.com/Cysu/noisy_label) and [Webvision](https://data.vision.ee.ethz.ch/cvl/webvision/dataset2017.html) datasets, you need to download the datasets first and specify the data directory in the code. 
 
 ## Citing this work
 If you use this code in your work, please cite the accompanying paper:
